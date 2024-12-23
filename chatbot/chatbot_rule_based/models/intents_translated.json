@@ -1,0 +1,741 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hai",
+        "Apa kabar?",
+        "Apa ada orang di sana?",
+        "Halo",
+        "Selamat siang.",
+        "Ada apa?",
+        "Apa kabar?",
+        "hei",
+        "Whatsup",
+        "Apa yang kau lakukan?"
+      ],
+      "responses": [
+        "Halo!",
+        "Senang bertemu denganmu lagi!",
+        "Hai, ada yang bisa kubantu?"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "cya",
+        "sampai jumpa",
+        "bye bye",
+        "Sampai nanti",
+        "Selamat tinggal",
+        "Aku akan pergi.",
+        "Bye",
+        "Have a Good day",
+        "kita bicara lagi nanti",
+        "ttyl",
+        "Aku harus pergi.",
+        "gtg"
+      ],
+      "responses": [
+        "Senang melihatmu pergi:",
+        "Sampai nanti.",
+        "Selamat tinggal!",
+        "Ayo segera kembali"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "creator",
+      "patterns": [
+        "apa nama pengembang Anda",
+        "Siapa nama penciptamu?",
+        "apa nama pengembang",
+        "Siapa nama penciptanya?",
+        "Yang telah menciptakan kamu,",
+        "pengembang Anda",
+        "penciptamu",
+        "siapa pengembang Anda",
+        "pengembang",
+        "you are made by",
+        "Andadibuatolehsiapa",
+        "Yang telah menciptakan kamu,",
+        "Yang telah menciptakan kamu,",
+        "pembuat",
+        "Siapa yang membuat Anda",
+        "yang merancang Anda"
+      ],
+      "responses": ["Mahasiswa"],
+      "context_set": ""
+    },
+    {
+      "tag": "name",
+      "patterns": [
+        "nama",
+        "nama Anda",
+        "apakah Anda memiliki nama",
+        "kau dipanggil apa?",
+        "Siapa namamu?",
+        "Aku harus memanggilmu apa?",
+        "Siapa namamu?",
+        "apa yang Anda",
+        "siapa kau?",
+        "siapa ini",
+        "apa yang saya chatting dengan",
+        "siapa yang saya ambil untuk",
+        "apa yang Anda"
+      ],
+      "responses": [
+        "Kau bisa memanggilku pembaca pikiran.",
+        "Aku pembaca pikiran.",
+        "Aku Chatbot.",
+        "Aku adalah penolongmu."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "hours",
+      "patterns": [
+        "waktu kuliah",
+        "apa waktu kuliah",
+        "hari kerja",
+        "Kapan kalian buka?",
+        "apa jam Anda",
+        "jam operasi",
+        "Kapan kampusnya dibuka?",
+        "Waktu kuliah",
+        "bagaimana dengan waktu kuliah",
+        "adalah perguruan tinggi terbuka pada Sabtu",
+        "mengatakan sesuatu tentang waktu kuliah",
+        "apa jam kuliah",
+        "Kapan aku harus kuliah?",
+        "Kapan aku harus kuliah?",
+        "apa waktu kuliah saya",
+        "Waktu kuliah",
+        "waktu kuliah"
+      ],
+      "responses": ["Kampus buka jam 8 pagi jam 5 sore Senin-Sabtu!"],
+      "context_set": ""
+    },
+    {
+      "tag": "number",
+      "patterns": [
+        "info lebih",
+        "info kontak",
+        "bagaimana menghubungi perguruan tinggi",
+        "Nomor telepon perguruan tinggi",
+        "nomor kuliah",
+        "Apa kontak Anda tidak",
+        "Nomor kontak?",
+        "bagaimana memanggilmu",
+        "Ponsel kuliah tidak ada?",
+        "bagaimana saya bisa menghubungi Anda",
+        "Bisa minta nomor teleponmu?",
+        "bagaimana saya bisa menghubungi Anda",
+        "nomor telepon",
+        "telepon tidak ada",
+        "panggilan"
+      ],
+      "responses": ["Anda dapat menghubungi di: +62 (265) 255 0424"],
+      "context_set": ""
+    },
+    {
+      "tag": "course",
+      "patterns": [
+        "daftar kursus",
+        "daftar kursus yang ditawarkan",
+        "daftar tentu saja ditawarkan dalam",
+        "apa saja yang ditawarkan di perguruan tinggi Anda?",
+        "Kursus?",
+        "kursus yang ditawarkan",
+        "kursus yang ditawarkan pada nama Anda yang tidak aktif)",
+        "kursus yang Anda tawarkan",
+        "cabang?",
+        "Kursus tersedia di UNI?",
+        "cabang tersedia di perguruan tinggi Anda?",
+        "apa saja di UNI?",
+        "apa cabang di UNI?",
+        "apa saja yang tersedia di UNI?",
+        "branch tersedia di UNI?",
+        "Bisakah kau memberitahuku kursus yang tersedia di UNI?",
+        "Dapatkah Anda memberitahu saya cabang tersedia di UNI?",
+        "Rekayasa komputer?",
+        "komputer",
+        "Rekayasa komputer?",
+        "it",
+        "IT",
+        "Teknologi Informasi",
+        "AI/Ml",
+        "Teknik mesin",
+        "Teknik kimia",
+        "Teknik sipil"
+      ],
+      "responses": [
+        "Universitas kami menawarkan Program Studi Informatika dan Teknik Industri."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "fees",
+      "patterns": [
+        "informasi tentang biaya",
+        "informasi biaya",
+        "Beritahu aku biayanya.",
+        "Biaya kuliah",
+        "biaya per semester",
+        "apa biaya setiap semester",
+        "apa biaya setiap tahun",
+        "apa itu biaya",
+        "apa biaya",
+        "berapa biayanya?",
+        "biaya untuk tahun pertama",
+        "biaya",
+        "tentang biaya",
+        "Beritahu aku sesuatu tentang biaya",
+        "Apa biaya asrama",
+        "berapa biayanya?",
+        "Biaya asrama",
+        "biaya untuk kamar AC",
+        "biaya untuk kamar non-AC",
+        "biaya untuk kamar Ac untuk gadis-gadis",
+        "biaya untuk non-Ac kamar untuk gadis-gadis",
+        "biaya untuk kamar Ac untuk anak laki-laki",
+        "biaya untuk kamar non-Ac untuk anak laki-laki"
+      ],
+      "responses": [
+        "Untuk kunjungan detail Fee silahkan hubungi no berikut +62 (265) 255 0424 atau email : info@sttcipasung.ac.id"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "location",
+      "patterns": [
+        "dimana kampusnya berada?",
+        "perguruan tinggi terletak di",
+        "di mana kuliah",
+        "di mana perguruan tinggi terletak",
+        "alamat kuliah",
+        "bagaimana mencapai perguruan tinggi",
+        "lokasi perguruan tinggi",
+        "Alamat kuliah",
+        "Dimana kampusnya?",
+        "bagaimana aku bisa kuliah",
+        "whats alamat perguruan tinggi",
+        "apa alamat perguruan tinggi",
+        "alamat",
+        "lokasi"
+      ],
+      "responses": [
+        "Untuk Link Google Maps <a href=\"https://maps.app.goo.gl/dfCnLh78SsYcZJ9q6\"> disini</a> atau alamat lengkap berikut Jl. Cisinga No.KM1, Cilampunghilir, Kec. Padakembang, Kabupaten Tasikmalaya, Jawa Barat 46466"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "hostel",
+      "patterns": [
+        "Fasilitas hostel",
+        "Pelayan asrama",
+        "Lokasi hostel",
+        "Alamat hostel",
+        "Fasilitas hostel",
+        "Biaya asrama",
+        "Apakah perguruan tinggi menyediakan Asrama",
+        "Apakah ada asrama",
+        "Dimana asrama",
+        "Anda memiliki asrama",
+        "apakah kalian memiliki hostel",
+        "Hostel",
+        "Kapasitas hostel",
+        "apa biaya asrama",
+        "bagaimana untuk mendapatkan di asrama",
+        "apa alamat asrama",
+        "seberapa jauh asrama dari perguruan tinggi",
+        "Jarak kuliah asrama",
+        "di mana asrama",
+        "seberapa besar asrama",
+        "jarak antara perguruan tinggi dan asrama",
+        "jarak antara asrama dan perguruan tinggi"
+      ],
+      "responses": ["STT Cipasung Menyediakan Asrama Dilingkungan Kampus"],
+      "context_set": ""
+    },
+    {
+      "tag": "event",
+      "patterns": [
+        "events terorganisir",
+        "daftar kejadian",
+        "daftar acara terorganisir di perguruan tinggi",
+        "daftar acara yang dilakukan di perguruan tinggi",
+        "Peristiwa apa yang dilakukan di perguruan tinggi",
+        "Apakah ada acara diadakan di perguruan tinggi",
+        "Kejadian?",
+        "fungsi",
+        "apa peristiwa",
+        "ceritakan tentang peristiwa",
+        "bagaimana dengan peristiwa"
+      ],
+      "responses": [
+        "Untuk kunjungan detail event mengunjungi <a target=\"_kosong\" href=\"ADD YOUR FUNCTIONS LINK ATAU RESPONSE ANDA Sendiri\"> di sini</a>"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "document",
+      "patterns": [
+        "dokumen yang akan dibawa",
+        "dokumen yang diperlukan untuk admision",
+        "dokumen yang diperlukan pada waktu pengakuan",
+        "dokumen yang diperlukan selama penerimaan",
+        "dokumen yang diperlukan untuk admision",
+        "dokumen yang diperlukan pada saat masuk",
+        "dokumen yang diperlukan selama penerimaan",
+        "Dokumen apa yang diperlukan untuk masuk",
+        "Dokumen mana yang akan dibawa untuk masuk",
+        "dokumen",
+        "dokumen apa yang saya butuhkan",
+        "dokumen apa yang saya butuhkan untuk masuk",
+        "dokumen yang diperlukan"
+      ],
+      "responses": [
+        "Untuk mengetahui lebih lanjut tentang dokumen yang diperlukan kunjungan <a target=\"_kosong\" href=\"ADD LINK OF ADMISSION GUIDANCE DOCUMEN DARI WUSSITY ANDA \"> di sini</a>"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "floors",
+      "patterns": [
+        "ukuran kampus",
+        "ukuran bangunan",
+        "Berapa banyak lantai yang dimiliki kampus",
+        "lantai di perguruan tinggi",
+        "lantai di perguruan tinggi",
+        "seberapa tinggi Universitas Universitas Teknik UNI",
+        "lantai"
+      ],
+      "responses": ["Perguruan tinggi saya memiliki total 3 Lantai"],
+      "context_set": ""
+    },
+    {
+      "tag": "syllabus",
+      "patterns": [
+        "Silabus UNTUK IT",
+        "apa silabus Teknologi Informasi",
+        "sylabus",
+        "jadwal",
+        "apa silabus IT",
+        "sylabus",
+        "Apa kuliah berikutnya"
+      ],
+      "responses": [
+        "Waktu dapat memberikan langsung ke siswa OR Untuk mengetahui tentang kunjungan syllabus <a target=\"_kosong\" href=\"TIMETABLE LINK\"> di sini</a>"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "library",
+      "patterns": [
+        "apakah ada perpustakaan",
+        "fasilitas perpustakaan",
+        "fasilitas perpustakaan",
+        "apakah Anda memiliki perpustakaan",
+        "apakah perguruan tinggi memiliki fasilitas perpustakaan",
+        "perpustakaan perguruan tinggi",
+        "di mana saya bisa mendapatkan buku",
+        "fasilitas buku",
+        "Dimana perpustakaan",
+        "Pustaka",
+        "Informasi pustaka",
+        "Informasi buku pustaka",
+        "Ceritakan tentang perpustakaan",
+        "berapa banyak perpustakaan"
+      ],
+      "responses": [
+        "Ada satu perpustakaan besar dan luas dengan waktu operasional adalah 8 pagi sampai 5 sore dan untuk kunjungan lebih lanjut <a href=\"https://sttcipasung.ac.id/perpustakaan/\"> disini</a>"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "infrastructure",
+      "patterns": [
+        "bagaimana infrastruktur perguruan tinggi",
+        "infrastruktur",
+        "infrastruktur perguruan tinggi"
+      ],
+      "responses": [
+        "Universitas kita punya infrastruktur yang bagus kampus bersih bagus sekali lab IT dengan koneksi internet yang bagus"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "canteen",
+      "patterns": [
+        "fasilitas makanan",
+        "Fasilitas kantin",
+        "Fasilitas kantin",
+        "Apakah ada kantin",
+        "Apakah ada kafetaria di perguruan tinggi",
+        "Apakah perguruan tinggi memiliki kantin",
+        "Dimana kantin",
+        "di mana kafetaria",
+        "Kantin",
+        "Makanan",
+        "Kafetaria"
+      ],
+      "responses": [
+        "Universitas kami memiliki kantin dengan berbagai makanan yang tersedia"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "menu",
+      "patterns": [
+        "menu makanan",
+        "makanan di kantin",
+        "Apa yang ada di menu",
+        "apa yang tersedia di kantin kampus",
+        "makanan apa yang bisa kita dapatkan di kantin perguruan tinggi",
+        "variasi makanan",
+        "Apa yang bisa dimakan?"
+      ],
+      "responses": [
+        "kami melayani Franky, Locho, Alu-puri, Kachori, Khavsa, Thaali dan banyak lagi pada menu"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "placement",
+      "patterns": [
+        "Apa penempatan perguruan tinggi",
+        "Perusahaan mana yang berkunjung di perguruan tinggi",
+        "Apa paket rata-rata",
+        "kunjungan perusahaan",
+        "paket",
+        "Tentang penempatan",
+        "penempatan",
+        "perekrutan",
+        "perusahaan"
+      ],
+      "responses": [
+        "Untuk mengetahui tentang penempatan mengunjungi <a target=\"_kosong\" href=\"PLACEMENT INFORMASI LINK DARI UNIVERSITY ANDA WEBSITE JIKA MEREKA MEMILIKI\"> di sini</a>"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "ithod",
+      "patterns": ["Siapa HOD", "Dimana HOD", "itu hod", "nama itu hod"],
+      "responses": [
+        "Semua departemen teknik hanya memiliki satu XYZ hod yang tersedia pada (Namalace)"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "computerhod",
+      "patterns": [
+        "Siapa HUD komputer",
+        "Dimana komputer HOD",
+        "hod komputer",
+        "nama hod komputer"
+      ],
+      "responses": [
+        "Semua departemen teknik hanya memiliki satu XYZ hod yang tersedia pada (NAMA PLACE)"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "extchod",
+      "patterns": [
+        "Siapa extc HOD",
+        "Dimana extc HOD",
+        "extc hod",
+        "nama extc hod"
+      ],
+      "responses": [
+        "berbeda sekolah bijaksana hod berbeda. Jadi lebih jelas dengan sekolah atau departemen Anda"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "principal",
+      "patterns": [
+        "apa nama kepala sekolah",
+        "whatv adalah nama utama",
+        "nama utama",
+        "Siapa kepala sekolah perguruan tinggi",
+        "Dimana kantor kepala sekolah?",
+        "Kepala Sekolah",
+        "nama kepala sekolah"
+      ],
+      "responses": [
+        "XYZ adalah kepala sekolah perguruan tinggi dan jika Anda membutuhkan bantuan kemudian panggilan hod cabang Anda pertama.Itu lebih tepat"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "sem",
+      "patterns": [
+        "tanggal ujian",
+        "jadwal ujian",
+        "Kapan ujian semester",
+        "Jadwal ujian Semester",
+        "sem",
+        "Semester",
+        "ujian",
+        "kapan ujian",
+        "jadwal ujian",
+        "tanggal ujian",
+        "kapan semester"
+      ],
+      "responses": [
+        "Berikut adalah Kalender Academic <a href=\"https://sttcipasung.ac.id/tentang-sttc/\">website</a>"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "admission",
+      "patterns": [
+        "apa proses pengakuan",
+        "apa proses penerimaan",
+        "Bagaimana mengambil masuk di perguruan tinggi Anda",
+        "Apa proses untuk masuk",
+        "Masuk",
+        "Proses penerimaan"
+      ],
+      "responses": [
+        "Aplikasi juga dapat diajukan secara online melalui Unversity's <a href=\"https://sttcipasung.ac.id/\">website</a>"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "scholarship",
+      "patterns": [
+        "beasiswa",
+        "Apakah beasiswa tersedia",
+        "rekayasa beasiswa",
+        "beasiswa itu",
+        "beasiswa ce",
+        "beasiswa mekanis",
+        "beasiswa sipil",
+        "kimia beasiswa",
+        "beasiswa untuk AI/ML",
+        "beasiswa yang tersedia",
+        "beasiswa untuk teknik komputer",
+        "beasiswa untuk rekayasa IT",
+        "beasiswa untuk teknik mekanis",
+        "beasiswa teknik sipil",
+        "beasiswa untuk rekayasa kimia",
+        "daftar beasiswa",
+        "beasiswa comps",
+        "IT beasiswa",
+        "Beasiswa mekanis",
+        "Beasiswa sipil",
+        "beasiswa kimia",
+        "Beasiswa mobil",
+        "tahun pertama beasiswa",
+        "beasiswa tahun kedua",
+        "beasiswa tahun ketiga",
+        "beasiswa tahun keempat"
+      ],
+      "responses": [
+        "Banyak beasiswa pemerintah didukung oleh universitas kami. diantaranya KIP Kuliah, Beasiswa Kampus, Beasiswa Tahfidz Minimal 3 Juz"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "facilities",
+      "patterns": [
+        "Apa fasilitas perguruan tinggi menyediakan",
+        "Fasilitas kampus",
+        "Apa fasilitas perguruan tinggi",
+        "fasilitas",
+        "fasilitas yang disediakan"
+      ],
+      "responses": [
+        "Departemen Teknik Universitas kami menyediakan sepenuhnya AC Lab dengan koneksi internet, kelas pintar, Auditorium, perpustakaan,canteen"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "college intake",
+      "patterns": [
+        "jumlah maksimum siswa",
+        "jumlah kursi per cabang",
+        "jumlah kursi di setiap cabang",
+        "jumlah maksimum kursi",
+        "maksimum penerimaan siswa",
+        "Apa asupan perguruan tinggi",
+        "berapa banyak stundent yang diambil di setiap cabang",
+        "alokasi kursi",
+        "kursi"
+      ],
+      "responses": [
+        "Bagi IT, komputer dan ekstrem 60 per cabang mungkin berbeda untuk departemen yang berbeda."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "uniform",
+      "patterns": [
+        "Kode berpakaian perguruan tinggi",
+        "dresscode kuliah",
+        "Apa itu seragam?",
+        "Bisa kita pakai baju kasual?",
+        "Apakah perguruan tinggi memiliki seragam",
+        "Apakah ada seragam",
+        "seragam",
+        "bagaimana dengan seragam",
+        "Apa kita harus memakai seragam?"
+      ],
+      "responses": ["ENTER YOUR UNIVERSITY UNIFORM CIRCULER"],
+      "context_set": ""
+    },
+    {
+      "tag": "committee",
+      "patterns": [
+        "apa yang berbeda komitmen di perguruan tinggi",
+        "komite yang berbeda di perguruan tinggi",
+        "Apakah ada komite di perguruan tinggi",
+        "Berikan rincian komite",
+        "komite",
+        "berapa banyak komite yang ada di perguruan tinggi"
+      ],
+      "responses": [
+        "Untuk berbagai komitmen dalam kontak perguruan tinggi nomor ini: ADD ANGKA"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "random",
+      "patterns": [
+        "Aku mencintaimu",
+        "Maukah kau menikah denganku",
+        "Apakah kau mencintaiku"
+      ],
+      "responses": [
+        "Saya tidak program untuk ini, silakan meminta permintaan yang sesuai"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "swear",
+      "patterns": [
+        "fuck",
+        "Jalang",
+        "Diam.",
+        "neraka",
+        "bodoh",
+        "idiot",
+        "keledai bodoh",
+        "bajingan",
+        "keparat"
+      ],
+      "responses": [
+        "silakan gunakan bahasa yang sesuai",
+        "Mempertahankan kesopanan akan dihargai"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "vacation",
+      "patterns": [
+        "hari raya",
+        "kapan semester akan dimulai",
+        "kapan semester akan berakhir",
+        "Kapan hari liburnya?",
+        "daftar hari libur",
+        "Liburan pada tahun ini",
+        "daftar liburan",
+        "tentang liburan",
+        "tentang hari libur",
+        "Kapan liburan",
+        "Kapan hari libur?",
+        "berapa lama akan liburan"
+      ],
+      "responses": [
+        "Kalender akademis diberikan kepada Anda oleh kelas-prordinator setelah Anda bergabung dengan Anda masing-masing kelas"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "sports",
+      "patterns": [
+        "olahraga dan permainan",
+        "berikan rincian olahraga",
+        "infrastruktur olahraga",
+        "fasilitas olahraga",
+        "informasi tentang olahraga",
+        "Kegiatan olahraga",
+        "mohon berikan informasi olahraga dan permainan"
+      ],
+      "responses": [
+        "Universitas kami mendorong pengembangan seluruh siswa dan dengan demikian menyediakan fasilitas olahraga di kampus. Untuk lebih lanjut kunjungan rincian<a target=\"_blatter\" href=/\"®LINK IF HAVE)\">disini</a>"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "salutaion",
+      "patterns": [
+        "oke",
+        "ookie",
+        "kerja bagus",
+        "Bagus.",
+        "Kerja bagus",
+        "Terima kasih atas bantuannya.",
+        "Terima Kasih",
+        "tidak apa-apa",
+        "Terima kasih",
+        "Kerja bagus.",
+        "k",
+        "oke",
+        "oke"
+      ],
+      "responses": [
+        "Saya senang saya membantu Anda",
+        "Selamat datang, ada lagi yang bisa kubantu?"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "task",
+      "patterns": [
+        "apa yang dapat Anda lakukan",
+        "apa hal yang dapat Anda lakukan",
+        "hal-hal yang dapat Anda lakukan",
+        "Apa yang bisa kau lakukan untukku?",
+        "bagaimana kau bisa membantuku?",
+        "mengapa saya harus menggunakan Anda"
+      ],
+      "responses": [
+        "Aku bisa menjawab pertanyaan menengah rendah mengenai perguruan tinggi.",
+        "Anda dapat mengajukan pertanyaan tentang perguruan tinggi, dan saya akan mencoba untuk menjawab mereka"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "ragging",
+      "patterns": [
+        "scraging",
+        "praktek ragging aktif di perguruan tinggi",
+        "apakah perguruan tinggi memiliki fasilitas antiraping",
+        "Apakah ada kasus ragging",
+        "Ini sudah selesai.",
+        "lap melawan",
+        "fasilitas antiragging",
+        "scragging juniors",
+        "menghapus riwayat",
+        "insiden ragging"
+      ],
+      "responses": [
+        "Kami bangga untuk memberitahu Anda bahwa perguruan tinggi kami menyediakan ragging lingkungan bebas, dan kami memiliki aturan ketat terhadap ragging"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "hod",
+      "patterns": ["hod", "nama hod", "siapa hod itu"],
+      "responses": [
+        "HUD berbeda untuk setiap cabang, silakan lebih spesifik seperti: (HOD itu)"
+      ],
+      "context_set": ""
+    }
+  ]
+}

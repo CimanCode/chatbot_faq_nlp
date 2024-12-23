@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chatbot FAQ</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #1e1e2f;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        color: #ffffff;
+      }
+
+      .chat-container {
+        width: 100%;
+        max-width: 800px;
+        height: 90vh;
+        background: #2b2b3c;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      }
+
+      .chat-header {
+        background-color: #3c3c51;
+        padding: 15px;
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+        border-bottom: 1px solid #444454;
+      }
+
+      .chat-messages {
+        flex: 1;
+        padding: 20px;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .message {
+        max-width: 70%;
+        padding: 15px;
+        border-radius: 10px;
+        word-wrap: break-word;
+      }
+
+      .message.user {
+        align-self: flex-end;
+        background-color: #007bff;
+        color: #ffffff;
+      }
+
+      .message.bot {
+        align-self: flex-start;
+        background-color: #444454;
+        color: #ffffff;
+      }
+
+      .typing-indicator {
+        align-self: flex-start;
+        color: #888;
+        font-style: italic;
+        display: none;
+        margin-top: 5px;
+        animation: blink 1.5s infinite;
+      }
+
+      @keyframes blink {
+        0% {
+          opacity: 0.3;
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0.3;
+        }
+      }
+
+      #chat-form {
+        display: flex;
+        padding: 15px;
+        background-color: #3c3c51;
+        border-top: 1px solid #444454;
+        gap: 10px; /* Tambahkan jarak antar elemen */
+      }
+
+      #chat-form input[type="text"] {
+        flex: 1; /* Membuat input menyesuaikan lebar yang tersedia */
+        padding: 12px; /* Tambahkan padding untuk kenyamanan */
+        border: none;
+        border-radius: 5px;
+        background-color: #2b2b3c;
+        color: #ffffff;
+        font-size: 14px; /* Sesuaikan ukuran font */
+      }
+
+      #chat-form input[type="text"]::placeholder {
+        color: #777777;
+      }
+
+      #chat-form button {
+        padding: 12px 20px; /* Tambahkan padding untuk proporsional */
+        background-color: #007bff;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px; /* Sesuaikan ukuran font */
+      }
+
+      #chat-form button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="chat-container">
+      <div class="chat-header">FAQ Chatbot</div>
+      <div class="chat-messages" id="chat-messages"></div>
+      <div id="typing-indicator" class="typing-indicator">Bot is typing...</div>
+      <form id="chat-form">
+        {% csrf_token %}
+        <input
+          type="text"
+          id="question"
+          name="question"
+          placeholder="Ketik pertanyaan Anda..."
+          required
+        />
+        <button type="submit">Kirim</button>
+      </form>
+    </div>
+
+    <script>
+      const form = document.getElementById("chat-form");
+      const input = document.getElementById("question");
+      const messages = document.getElementById("chat-messages");
+      const typingIndicator = document.getElementById("typing-indicator");
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        // Tambahkan pesan pengguna ke UI
+        const userMessage = document.createElement("div");
+        userMessage.classList.add("message", "user");
+        userMessage.innerText = input.value;
+        messages.appendChild(userMessage);
+        messages.scrollTop = messages.scrollHeight;
+
+        // Tampilkan animasi mengetik
+        typingIndicator.style.display = "block";
+
+        // Kirim pertanyaan ke server
+        const response = await fetch("", {
+          method: "POST",
+          headers: {
+            "X-Requested-With": "XMLHttpRequest",
+            "Content-Type": "application/x-www-form-urlencoded",
+            "X-CSRFToken": "{{ csrf_token }}",
+          },
+          body: new URLSearchParams({ question: input.value }),
+        });
+
+        const data = await response.json();
+
+        // Sembunyikan animasi mengetik
+        typingIndicator.style.display = "none";
+
+        // Tambahkan pesan bot ke UI
+        const botMessage = document.createElement("div");
+        botMessage.classList.add("message", "bot");
+        botMessage.innerHTML = data.response;
+        messages.appendChild(botMessage);
+
+        // Gulir ke bawah
+        messages.scrollTop = messages.scrollHeight;
+
+        // Kosongkan input
+        input.value = "";
+      });
+    </script>
+  </body>
+</html>
